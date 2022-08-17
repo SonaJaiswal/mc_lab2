@@ -3,10 +3,13 @@
 #include <conio.h>
 using namespace std;
 int main()
-{
+{   
+    
+    int delay = 10 ;
     int totaltime = 120;
     int a[4] = {10,30,20,10} ;
     int m1, m2, m3, m4, i;
+    int t = 0 ;
     
     m1 = a[0]/10 ; 
     m2 = a[1]/10 ;  
@@ -18,27 +21,56 @@ int main()
         cout << "Time of user " << i + 1 << " is "  << a[i] << endl ;
     }
     
+    cout << endl ;
+    
     while(totaltime != 0 ){
         bool flag = false;
         if(m1 > 0 ){
+            if(delay == t ){
+                continue ;
+            }
+            
+            t ++ ;
+            
             cout << "User 1 using channel" << endl ;
             totaltime = totaltime - 10 ;
             m1 = m1 - 1 ;
             flag = true;
         }
         if(m2>0){
+            
+            if(delay == t ){
+                continue ;
+            }
+            
+            t ++ ;
+            
             cout << "User 2 using channel" << endl;
             totaltime = totaltime - 10 ;
             flag = true;
             m2 = m2 - 1 ;
         }
         if(m3>0){
+            
+            if(delay == t ){
+                continue ;
+            }
+            
+            t ++ ;
+            
             cout << "User 3 using channel" << endl ;
             totaltime = totaltime - 10 ;
             flag = true;
             m3 = m3 - 1 ;
         }
         if(m4>0){
+            
+            if(delay == t ){
+                continue ;
+            }
+            
+            t ++ ;
+            
             cout << "User 4 using channel" << endl ;
             totaltime = totaltime - 10 ;
             flag = true;
@@ -50,3 +82,4 @@ int main()
     }
     
 }
+
